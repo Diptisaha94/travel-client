@@ -1,14 +1,17 @@
 import './App.css';
-import Header from './componets/Header';
-import Services from './componets/Services';
-import Slider from './componets/Slider';
+import {
+  RouterProvider,
+} from "react-router-dom";
+import { router } from './Routes';
+
 
 function App() {
+  
+  
   return (
     <div className="">
-      <Header></Header>
-      <Slider></Slider>
-      <Services></Services>
+      
+      <RouterProvider router={router}></RouterProvider>
     </div>
   );
 }
