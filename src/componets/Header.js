@@ -1,6 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../context/Authcontext';
 
 const Header = () => {
+  const{user,logOut}=useContext(AuthContext);
+  const handleSignOut=()=>{
+    logOut()
+    .then(() => {
+      // Sign-out successful.
+    }).catch((error) => {
+      // An error happened.
+    });
+
+  }
     return (
         <div className="navbar bg-base-100">
   <div className="flex-1">
@@ -8,7 +20,16 @@ const Header = () => {
   </div>
   <div className="flex-none">
     <ul className="menu menu-horizontal p-0">
-      <li><a>Item 1</a></li>
+      <li>
+        {
+          user && user.uid?<Link>My Reviews</Link>:null
+        }
+      </li>
+      <li>
+        {
+          user && user.uid?<Link>Add Service</Link>:null
+        }
+      </li>
       <li tabIndex={0}>
         <a>
           Parent
@@ -19,7 +40,9 @@ const Header = () => {
           <li><a>Submenu 2</a></li>
         </ul>
       </li>
-      <li><a>Item 3</a></li>
+      <li>
+      {user && user.uid?<button onClick={handleSignOut}>Sign Out</button>:<Link to={'/login'}><button>Login</button></Link>}
+      </li>
     </ul>
   </div>
 </div>
