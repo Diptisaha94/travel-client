@@ -27,8 +27,8 @@ const Header = () => {
       </li>
       <li>
         {
-          user && user.uid?<Link>Add Service</Link>:null
-        }
+          user && user.uid?<Link to='/addservice'>Add Service</Link>:null
+        } 
       </li>
       <li>
       {user && user.uid?<button onClick={handleSignOut}>Sign Out</button>:<Link to={'/login'}><button>Login</button></Link>}

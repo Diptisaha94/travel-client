@@ -15,7 +15,9 @@ const Home = () => {
             serviceData.map(service=><Service key={service._id} service={service}></Service>)
         }
       </div>
-      <Link to='/services'><button className="btn btn-active btn-primary">Button</button></Link>
+      <div className="w-2/3 mx-auto text-center mt-10">
+      <Link to='/services'><button className="btn btn-active btn-primary ">See All</button></Link>
+      </div>
         </div>
     );
 };
