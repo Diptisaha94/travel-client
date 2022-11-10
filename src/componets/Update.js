@@ -7,10 +7,10 @@ const Update = () => {
     const handleInputChange = event =>{
         setUserReview(event.target.value);
     }
-    const handleUpdateReview=event=>{
-        event.preventDefault();
+    //travel-server-eta.vercel.app/update
+    const handleUpdateReview=()=>{
         console.log(userReview);
-        fetch(`https://travel-server-eta.vercel.app/${userReivewInfo._id}`, {
+        fetch(`https://travel-server-eta.vercel.app/update/${userReivewInfo._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -19,10 +19,7 @@ const Update = () => {
         })
         .then(res => res.json())
         .then(data => {
-            // if (data.modifiedCount > 0){
-            //     alert('user updated')
                 console.log(data);
-            //}
             
         })
     }
