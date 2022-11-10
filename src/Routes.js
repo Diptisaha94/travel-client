@@ -19,7 +19,7 @@ import Main from "./Layout/Main";
         {
           path:"/",
           element:<Home></Home>,
-          loader: ()=> fetch('https://travel-server-eta.vercel.app/services')  
+          loader: ()=> fetch('https://travel-server-eta.vercel.app/service')  
         },
         {
           path:"/home",

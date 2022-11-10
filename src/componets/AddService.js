@@ -10,7 +10,7 @@ const AddService = () => {
           img: e.target.image.value,
           description:e.target.descrip.value
         };
-    
+    e.target.reset();
         fetch("https://travel-server-eta.vercel.app/services", {
           method: "POST",
           headers: {
@@ -19,7 +19,7 @@ const AddService = () => {
           body: JSON.stringify(service)
         }).then(res => res.json())
         .then(data => {
-            toast.success("Wow so easy!")
+            toast.success("product add successfully")
         })
         .catch(err => {
           console.log(err);;
