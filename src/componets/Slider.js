@@ -1,33 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import image1 from '../images/img1.jpg';
 import image2 from '../images/img2.jpg';
 import image3 from '../images/img3.jpg';
-
+import '../service.css';
 const Slider = () => {
     return (
-        <div className="carousel w-full">
-  <div id="slide1" className="carousel-item relative w-full">
-    <img src={image1} className="w-full" alt='' />
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide4" className="btn btn-circle">❮</a> 
-      <a href="#slide2" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide2" className="carousel-item relative w-full">
-    <img src={image2} className="w-full" alt=''/>
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide1" className="btn btn-circle">❮</a> 
-      <a href="#slide3" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-  <div id="slide3" className="carousel-item relative w-full">
-    <img src={image3} className="w-full" alt=''/>
-    <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-      <a href="#slide2" className="btn btn-circle">❮</a> 
-      <a href="#slide4" className="btn btn-circle">❯</a>
-    </div>
-  </div> 
-</div>
+        <div className="img-gradient py-12 pb-24">
+           <h3 className='text-4xl text-bold pt-20'>ARE YOU READY TO TRAVEL?</h3>
+           <h3 className='text-4xl text-bold pb-300'>REMEMBER US !!</h3>
+           <Link to='/services'><button className="btn btn-active btn-primary my-8">All Services</button></Link>
+        </div>
     );
 };
 

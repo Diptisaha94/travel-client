@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import AddService from "./componets/AddService";
+import Blog from "./componets/Blog";
 import Home from "./componets/Home";
 import Login from "./componets/Login";
 import Myreview from "./componets/Myreview";
@@ -39,6 +40,10 @@ import Main from "./Layout/Main";
         {
           path:"/myreview",
           element:<Myreview></Myreview>
+        },
+        {
+          path:"/public",
+          element:<Blog></Blog>
         },
         {
           path:"/addservice",

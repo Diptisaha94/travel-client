@@ -29,7 +29,7 @@ const Update = () => {
     return (
         <div>
             <h2>Please Update: {userReivewInfo.serviceName}</h2>
-                <textarea className='w-80 mt-12 p-3 border-2 border-indigo-600' onChange={handleInputChange} defaultValue={userReivewInfo.text} type="text" name='name' placeholder='name' required></textarea><br/>
+                <textarea className='w-80 mt-12 p-3 border-2 border-indigo-600' onChange={handleInputChange} type="text" name='name' placeholder='name' required></textarea><br/>
                 <button onClick={handleUpdateReview} className='btn btn-primary' type="submit">Update User</button>
         </div>
     );
