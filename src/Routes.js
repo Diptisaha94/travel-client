@@ -17,7 +17,12 @@ import Main from "./Layout/Main";
         {
           path:"/",
           element:<Home></Home>,
-          loader: ()=> fetch('http://localhost:5000/service')  
+          loader: ()=> fetch('http://localhost:5000/services')  
+        },
+        {
+          path:"/home",
+          element:<Home></Home>,
+          loader: ()=> fetch('http://localhost:5000/services')
         },
         {
           path:"/services",

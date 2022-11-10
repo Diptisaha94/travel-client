@@ -28,11 +28,11 @@ const AddService = () => {
       };
     return (
         <div className='w-2/4 mx-auto mt-14'>
-            <h3 className='text-3xl mb-6'>Add Product</h3>
+            <h3 className='text-3xl mb-6 font-bold'>Add Service</h3>
             <form onSubmit={handleSubmit}>
             <div>
             <label className='text-2xl'>
-    Name:
+   Service Name:
     <input className='border border-slate-500 p-2 ml-3' type="text" name="name" required/>
   </label>
 </div>
