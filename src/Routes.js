@@ -4,6 +4,7 @@ import Blog from "./componets/Blog";
 import Home from "./componets/Home";
 import Login from "./componets/Login";
 import Myreview from "./componets/Myreview";
+import PrivateRoute from "./componets/Privateroute";
 import Services from "./componets/Services";
 import ServicesDetails from "./componets/ServicesDetails";
 import Signup from "./componets/Signup";
@@ -18,12 +19,12 @@ import Main from "./Layout/Main";
         {
           path:"/",
           element:<Home></Home>,
-          loader: ()=> fetch('http://localhost:5000/services')  
+          loader: ()=> fetch('https://travel-server-eta.vercel.app/services')  
         },
         {
           path:"/home",
           element:<Home></Home>,
-          loader: ()=> fetch('http://localhost:5000/services')
+          loader: ()=> fetch('https://travel-server-eta.vercel.app/service')
         },
         {
           path:"/services",
@@ -39,7 +40,7 @@ import Main from "./Layout/Main";
         },
         {
           path:"/myreview",
-          element:<Myreview></Myreview>
+          element:<PrivateRoute><Myreview></Myreview></PrivateRoute>
         },
         {
           path:"/public",
@@ -47,17 +48,17 @@ import Main from "./Layout/Main";
         },
         {
           path:"/addservice",
-          element:<AddService></AddService>
+          element:<PrivateRoute><AddService></AddService></PrivateRoute>
         },
         {
           path:"/update/:id",
           element:<Update></Update>,
-          loader: ({params})=> fetch(`http://localhost:5000/update/${params.id}`)
+          loader: ({params})=> fetch(`https://travel-server-eta.vercel.app/update/${params.id}`)
         },
         {
           path:"/services/:id",
           element:<ServicesDetails></ServicesDetails>,
-          loader: ({params})=> fetch(`http://localhost:5000/services/${params.id}`)
+          loader: ({params})=> fetch(`https://travel-server-eta.vercel.app/services/${params.id}`)
         }
       ]
     },

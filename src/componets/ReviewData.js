@@ -6,7 +6,7 @@ const ReviewData = ({revie}) => {
     const [diplayReview,setDisplayReview]=useState(revie);
     const handleDelete = () => {
       
-          fetch(`http://localhost:5000/myreviews/${revie._id}`, {
+          fetch(`https://travel-server-eta.vercel.app/myreviews/${revie._id}`, {
               method: 'DELETE'
           })
               .then(res => res.json())

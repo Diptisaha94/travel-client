@@ -10,7 +10,7 @@ const Update = () => {
     const handleUpdateReview=event=>{
         event.preventDefault();
         console.log(userReview);
-        fetch(`http://localhost:5000/update/${userReivewInfo._id}`, {
+        fetch(`https://travel-server-eta.vercel.app/${userReivewInfo._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

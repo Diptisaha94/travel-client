@@ -12,7 +12,7 @@ const ServicesDetails = () => {
     const detailData = useLoaderData();
     const {name,description,img,price,_id}=detailData;
     useEffect(()=>{
-        fetch('http://localhost:5000/reviews')
+        fetch('https://travel-server-eta.vercel.app/reviews')
   .then(response => response.json())
   .then(data => setReviewItem(data))
      },[]);
@@ -32,7 +32,7 @@ const ServicesDetails = () => {
             name:user.displayName,
             photoURL:user.photoURL
         }
-        fetch('http://localhost:5000/services/:id', {
+        fetch('https://travel-server-eta.vercel.app/services/:id', {
       method: 'POST', // or 'PUT'
       headers: {
         'Content-Type': 'application/json',

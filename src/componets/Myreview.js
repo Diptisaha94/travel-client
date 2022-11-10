@@ -6,7 +6,7 @@ const Myreview = () => {
     const [myreviews,setMyreviews]=useState([]);
     const {user}=useContext(AuthContext);
     useEffect(()=>{
-        fetch(`http://localhost:5000/myreviews?email=${user?.email}`)
+        fetch(`https://travel-server-eta.vercel.app/myreviews?email=${user?.email}`)
   .then(response => response.json())
   .then(data => setMyreviews(data))
     },[user?.email])

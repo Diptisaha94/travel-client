@@ -11,7 +11,7 @@ const AddService = () => {
           description:e.target.descrip.value
         };
     
-        fetch("http://localhost:5000/services", {
+        fetch("https://travel-server-eta.vercel.app/services", {
           method: "POST",
           headers: {
             "content-type": "application/json"
